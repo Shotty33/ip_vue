@@ -1,29 +1,20 @@
 <template>
-  <mainNav></mainNav>
+  <navBar></navBar>
   <homeSection></homeSection>
-  <!-- <aboutSection></aboutSection>
-  <servicesSection></servicesSection>
-  <contactSection></contactSection> -->
-  <footerSection></footerSection> 
+  <footerSection></footerSection>
 </template>
 
 <script>
-import mainNav from './components/main-nav.vue'
-import homeSection from './components/home-section.vue'
-import footerSection from './components/footer-section.vue'
-// import aboutSection from './components/about-section.vue'
-// import servicesSection from './components/services-section.vue'
-// import contactSection from './components/contact-section.vue'
+import navBar from './components/views/Nav.vue'
+import homeSection from './components/views/Home.vue'
+import footerSection from './components/views/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    mainNav,
+    navBar,
     homeSection,
     footerSection,
-    // aboutSection,
-    // servicesSection,
-    // contactSection,
   }
 }
 </script>

@@ -25,6 +25,6 @@ export default {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
-  font: "Edu SA Beginner", roboto sans-serif;
+  font: "Edu SA Beginner"
 }
 </style>

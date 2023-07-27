@@ -12,12 +12,10 @@
         <!-- Regular navigation links for larger screens -->
         <ul class="nav-links" :class="{ 'show-menu': showMenu }">
           <li>
-            <router-link to="/" class="nav-item"><span>Home</span></router-link>
+            <router-link v-bind:to="{name: 'home'}" class="nav-item"><span>Home</span></router-link>
           </li>
           <li>
-            <router-link to="/about" class="nav-item"
-              ><span>About</span></router-link
-            >
+            <router-link v-bind:to="{name: 'about'}" class="nav-item"><span>About</span></router-link>
           </li>
           <li>
             <router-link to="/services" class="nav-item"
@@ -37,7 +35,7 @@
 
 
 export default {
-  name: "mainNav",
+  name: "navBar",
 
   data() {
     return {
