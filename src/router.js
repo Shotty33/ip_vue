@@ -16,11 +16,6 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  HomeSection,
-  AboutSection,
-  ServicesSection,
-  ContactSection,
-  
   mode: 'history', 
 });
 
