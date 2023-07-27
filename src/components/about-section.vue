@@ -2,14 +2,8 @@
     <div class="about-section">
         <h1>Who are we</h1>
     </div>
-    <div class="let-us">
-        <h2 class="rainbow-text" id="phrase">Let us show you what we see...</h2>
-    </div>
     <div>
         <img src="" alt="" width="100%" height="auto">
-    </div>
-    <div class="image-footer">
-        <h3>Photography for all</h3>
     </div>
 </template>
 

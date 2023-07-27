@@ -1,22 +1,19 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import HomeSection from './components/HomeSection.vue';
-import AboutSection from './components/AboutSection.vue';
-import ServicesSection from './components/ServicesSection.vue';
-import ContactSection from './components/ContactSection.vue';
-
-Vue.use(VueRouter);
+import { createRouter, createWebHistory } from 'vue-router';
+import homeSection from './components/home-section.vue';
+import aboutSection from './components/about-section.vue';
+import servicesSection from './components/services-section.vue';
+import contactSection from './components/contact-section.vue';
 
 const routes = [
-  { path: '/', component: HomeSection },
-  { path: '/about', component: AboutSection },
-  { path: '/services', component: ServicesSection },
-{ path: '/contact', component: ContactSection },
+  { path: '/', component: homeSection },
+  { path: '/about', component: aboutSection },
+  { path: '/services', component: servicesSection },
+  { path: '/contact', component: contactSection },
 ];
 
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHistory(),
   routes,
-  mode: 'history', 
 });
 
 export default router;

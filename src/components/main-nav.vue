@@ -11,21 +11,21 @@
 
         <!-- Regular navigation links for larger screens -->
         <ul class="nav-links" :class="{ 'show-menu': showMenu }">
-          <li class="nav-item">
-            <router-link to="/"><span>Home</span></router-link>
+          <li>
+            <router-link to="/" class="nav-item"><span>Home</span></router-link>
           </li>
           <li>
-            <router-link to="/about"
-              ><span class="nav-item">About</span></router-link
+            <router-link to="/about" class="nav-item"
+              ><span>About</span></router-link
             >
           </li>
-          <li class="nav-item">
-            <router-link to="/services"
+          <li>
+            <router-link to="/services" class="nav-item"
               ><span>Services & Pricing</span></router-link
             >
           </li>
-          <li class="nav-item">
-            <router-link to="/contact"><span>Contact Us</span></router-link>
+          <li>
+            <router-link to="/contact" class="nav-item"><span>Contact Us</span></router-link>
           </li>
         </ul>
       </div>
@@ -55,7 +55,6 @@ export default {
 <style>
 .navbar {
   background-color: #26272b;
-  color: #737373;
   display: flex;
   justify-content: flex-end;
   padding: 10px 5px;
@@ -69,6 +68,7 @@ export default {
 }
 
 .nav-links li {
+  list-style: none;
   margin-right: 20px;
 }
 
@@ -80,11 +80,19 @@ export default {
   display: none;
 }
 
-.bar {
-  width: 15px;
-  height: 1px;
+.nav-item {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: aqua;
+}
+
+.nav-item:hover {
+  color: #fff;
   background-color: #737373;
-  margin: 5px 0;
 }
 
 /* Media query for small screens */
@@ -99,5 +107,12 @@ export default {
     display: flex;
     flex-direction: column;
   }
+
+  .bar {
+  width: 15px;
+  height: 1px;
+  background-color: #737373;
+  margin: 5px 0;  
+}
 }
 </style>
