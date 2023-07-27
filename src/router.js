@@ -1,22 +1,27 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeView from './components/HomeView.vue';
-import AboutSection from './components/AboutView.vue';
-import ServicesSection from './components/ServicesView.vue';
-import ContactSection from './components/ContactView.vue';
+import HomeSection from './components/HomeSection.vue';
+import AboutSection from './components/AboutSection.vue';
+import ServicesSection from './components/ServicesSection.vue';
+import ContactSection from './components/ContactSection.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: HomeView },
-  { path: '/about', component: AboutView },
-  { path: '/services', component: ServicesView },
-{ path: '/contact', component: ContactView },
+  { path: '/', component: HomeSection },
+  { path: '/about', component: AboutSection },
+  { path: '/services', component: ServicesSection },
+{ path: '/contact', component: ContactSection },
 ];
 
 const router = new VueRouter({
   routes,
-  mode: 'history', // Use history mode for cleaner URLs (optional)
+  HomeSection,
+  AboutSection,
+  ServicesSection,
+  ContactSection,
+  
+  mode: 'history', 
 });
 
 export default router;

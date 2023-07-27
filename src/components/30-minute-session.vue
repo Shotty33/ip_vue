@@ -1,5 +1,5 @@
 <template>
-      <section id="30min-session-deatils">
+      <section id="30min-session-details">
       <h4 class="session-titles">30 minute session starting at $250. </h4> 
       <div class="session-info">
         <ul class="details-list">
@@ -8,12 +8,13 @@
           <li>Expect 15-30 digital images on a USB with a print release.</li>
           <li>Additional frames can be purchased at $3 per frame requested.</li>
         </ul>
+        </div>
     </section>
   </template>
   
   <script>
   export default {
-    name: "30-minute-session",
+    name: "30minuteSession",
   
   }
   </script>

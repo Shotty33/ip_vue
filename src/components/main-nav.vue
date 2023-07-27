@@ -2,18 +2,30 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <div class="navbar" id="main-nav">
-        <ul class="nav-links">
+        <!-- Hamburger icon for small screens -->
+        <div class="hamburger" @click="toggleMenu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <!-- Regular navigation links for larger screens -->
+        <ul class="nav-links" :class="{ 'show-menu': showMenu }">
           <li class="nav-item">
-            <router-link to="/" class="nav-link"><span>Home</span></router-link>
+            <router-link to="/"><span>Home</span></router-link>
+          </li>
+          <li>
+            <router-link to="/about"
+              ><span class="nav-item">About</span></router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link to="/" class="nav-link"><span>About</span></router-link>
+            <router-link to="/services"
+              ><span>Services & Pricing</span></router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link to="/" class="nav-link"><span>Services & Pricing</span></router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/" class="nav-link"><span>Contact Us</span></router-link>
+            <router-link to="/contact"><span>Contact Us</span></router-link>
           </li>
         </ul>
       </div>
@@ -22,8 +34,22 @@
 </template>
 
 <script>
+import { router } from "../router.js";
+
+
 export default {
   name: "mainNav",
+
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
+  },
 };
 </script>
 
@@ -33,8 +59,9 @@ export default {
   color: #737373;
   display: flex;
   justify-content: flex-end;
-  padding: 15px 10px;
+  padding: 10px 5px;
 }
+
 .nav-links {
   list-style: none;
   margin: 0;
@@ -47,12 +74,31 @@ export default {
 }
 
 .nav-links li:last-child {
-  margin-right: 0;
+  margin-right: 5px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #737373;
-  font-weight: bold;
+.hamburger {
+  display: none;
+}
+
+.bar {
+  width: 15px;
+  height: 1px;
+  background-color: #737373;
+  margin: 5px 0;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 770px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .show-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

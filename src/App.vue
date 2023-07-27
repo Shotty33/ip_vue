@@ -1,19 +1,19 @@
 <template>
   <mainNav></mainNav>
-  <homeView></homeView>
-  <footerSection>{{ footer-section }}</footerSection>
+  <homeSection></homeSection>
+  <footerSection></footerSection>
 </template>
 
 <script>
 import mainNav from './components/main-nav.vue'
-import homeView from './components/home-view.vue'
+import homeSection from './components/home-section.vue'
 import footerSection from './components/footer-section.vue'
 
 export default {
   name: 'App',
   components: {
     mainNav,
-    homeView,
+    homeSection,
     footerSection,
     
   }
@@ -27,6 +27,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
 </style>
