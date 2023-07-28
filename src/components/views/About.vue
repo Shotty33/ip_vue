@@ -16,7 +16,7 @@ export default {
 
 <style>
 .rainbow-text {
-  background-image: linear-gradient(45deg, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+  background-image: linear-gradient(45deg, #f00, #ff0, #0f0, #f0f, #f00);
   background-size: 100% 100%;
   animation: rainbow-animation 1s ease infinite;
   background-clip: text;

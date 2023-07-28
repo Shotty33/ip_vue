@@ -1,12 +1,9 @@
 <template>
   <div class="let-us">
-    <h2 class="rainbow-text" id="phrase">Let us show you what we see...</h2>
+    <h2 id="phrase">Let us show you what we see...</h2>
   </div>
   <div>
     <carouselSection>{{ carouselSection }}</carouselSection>
-  </div>
-  <div class="image-footer">
-    <h3>Photography for all</h3>
   </div>
 </template>
 
@@ -22,30 +19,10 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap");
-
-.rainbow-text {
-  background-image: linear-gradient(
-    45deg,
-    #f00,
-    #ff0,
-    #0f0,
-    #f0f,
-    #f00
-  );
-  background-size: 100% 100%;
-  animation: rainbow-animation 1s ease infinite;
-  background-clip: text;
-  -webkit-background-clip: text; /* For Safari/WebKit */
-  color: transparent;
+#phrase {
+  font-family: "Edu SA Beginner", roboto sans-serif;
   font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  font-family: "Edu SA Beginner", roboto sans-serif;
-}
-
-.image-footer {
-  font-family: "Edu SA Beginner", roboto sans-serif;
+  color: rgb(87, 238, 97);
 }
 
 @media screen and (max-width: 768px) {

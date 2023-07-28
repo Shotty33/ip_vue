@@ -1,6 +1,18 @@
 <template>
   <div class="carousel-wrapper">
     <div class="carousel">
+      <div class="adjective">
+        <transition-group name="adjective-slide" tag="p">
+          <span
+            v-for="(adj, index) in adjectives"
+            :key="index"
+            v-show="index === currentIndex"
+            :class="['rainbow-text', { active: index === currentIndex }]"
+          >
+            {{ adj }}
+          </span>
+        </transition-group>
+      </div>
       <transition-group name="slide" tag="div" class="image-wrapper">
         <img
           v-for="(image, index) in images"
@@ -31,15 +43,41 @@ export default {
         "https://ipwebapp.s3.us-east-2.amazonaws.com/images/carousel/sue.jpg",
       ],
       currentIndex: 0,
+      adjectives: [
+        "beauty",
+        "love",
+        "joy",
+        "happiness",
+        "family",
+        "friends",
+        "memories",
+        "laughter",
+        "fun",
+        "adventure",
+        "life",
+        "nature",
+        "peace",
+        "hope",
+        "smiles",
+      ],
+      currentAdjective: "beauty",
     };
   },
   methods: {
     nextImage() {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
+      setTimeout(() => {
+        this.currentAdjective =
+          this.adjectives[(this.currentIndex + 1) % this.adjectives.length];
+      }, 400);
     },
     prevImage() {
       this.currentIndex =
         (this.currentIndex - 1 + this.images.length) % this.images.length;
+      setTimeout(() => {
+        this.currentAdjective =
+          this.adjectives[(this.currentIndex + 1) % this.adjectives.length];
+      }, 400);
     },
   },
   mounted() {
@@ -54,6 +92,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 750px; /* Adjust the height as needed */
+  margin: 25px;
 }
 .carousel {
   position: relative;
@@ -87,5 +126,22 @@ export default {
 
 .slide-move {
   transition: transform 0.5s;
+}
+
+.adjective {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.adjective span {
+  margin: 0 10px;
+}
+
+.adjective .rainbow-text.active {
+  display: inline;
 }
 </style>
