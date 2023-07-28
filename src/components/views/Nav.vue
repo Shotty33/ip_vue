@@ -12,18 +12,17 @@
         <!-- Regular navigation links for larger screens -->
         <ul class="nav-links" :class="{ 'show-menu': showMenu }">
           <li>
-            <router-link v-bind:to="{name: 'home'}" class="nav-item"><span>Home</span></router-link>
+            <router-link v-bind:to="{name: 'homeSection'}" class="nav-item">Home</router-link>
           </li>
           <li>
-            <router-link v-bind:to="{name: 'about'}" class="nav-item"><span>About</span></router-link>
+            <router-link v-bind:to="{name: 'aboutSection'}" class="nav-item">About</router-link>
           </li>
           <li>
-            <router-link to="/services" class="nav-item"
-              ><span>Services & Pricing</span></router-link
+            <router-link v-bind:to="{name: 'servicesSection'}" class="nav-item">Services &amp; Pricing</router-link
             >
           </li>
           <li>
-            <router-link to="/contact" class="nav-item"><span>Contact Us</span></router-link>
+            <router-link v-bind:to="{name: 'contactSection'}" class="nav-item">Contact Us</router-link>
           </li>
         </ul>
       </div>
