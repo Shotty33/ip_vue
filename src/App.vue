@@ -32,7 +32,6 @@ export default {
   background-image: linear-gradient(
     45deg,
     #f00,
-    #ff0,
     #345
     #0f0,
     #f0f,
