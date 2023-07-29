@@ -50,6 +50,10 @@ export default {
 
 <style>
 .site-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-areas: "social-media center-column contact-info";
@@ -69,10 +73,12 @@ export default {
 .footer-content {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 20px;
 }
 
 #follow-us {
+  display: flex;
+  justify-content: center;
   font-family: "Edu SA Beginner", roboto sans-serif;
   font-size: 28px;
   color: whitesmoke;
@@ -82,10 +88,13 @@ export default {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  text-align: left;
 }
 
 .social-icons {
   margin-top: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icon {
@@ -107,21 +116,36 @@ export default {
 }
 
 .contact-info {
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 24px;
   color: #fff;
 }
 
 .contact-info p {
-  margin: 5px 0;
-}
+  display: flex;
+  flex-direction: column;
+  margin: 10px;}
 
 @media screen and (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
+  .site-footer {
+    grid-template-columns: auto;
+    grid-template-areas:
+      "center-column"
+      "social-media"
+      "contact-info";
+    font-size: 10px;
   }
+
+  .social-media {
+    justify-content: center;
+  }
+
   .contact-info {
     text-align: center;
-  }
+}
 }
 </style>
