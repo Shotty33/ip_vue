@@ -91,7 +91,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 750px; /* Adjust the height as needed */
+  height: 750px;
   margin: 25px;
 }
 .carousel {

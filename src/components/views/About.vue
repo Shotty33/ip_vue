@@ -26,26 +26,26 @@ export default {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-areas:
-    "about-us our-picture"
     "about-us our-picture";
-  padding: 5px 0 20px;
   font-size: 35px;
   line-height: 24px;
   color: #737373;
 }
 
 .about-us {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1000px;
-  padding: 10px 20px;
-  font-family: "Edu SA Beginner", roboto sans-serif;
   font-size: 35px;
   font-weight: 300;
   color: purple;
 }
 
 .our-picture {
-  grid-area: our-picture;
+    display: flex;
+  justify-content: center;
+  align-items: center;
   width: auto;
   height: 500px;
   margin: 0 auto;

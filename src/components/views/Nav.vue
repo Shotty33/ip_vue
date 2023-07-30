@@ -66,6 +66,7 @@ export default {
 
 <style>
 .container {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
